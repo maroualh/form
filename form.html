@@ -5,62 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <style>
-        body{
-            background-image: url("m.jpg");
-        }
-    input{
-            border-bottom-style:none;
-            padding: 1px;
-            bottom:20%;
-            size:5%;
-            background-color: white;
-            color:rgb(43, 42, 49);
-            size:40px;
-            }
-    div {
-     background-color:gray;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    width: 50%;
-    height: 20%;
-    position: center;
-    margin-left: 20%;
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-    h3{
-font-size: 150%;
-     margin-left: 40%;
-    color:white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-
-  .bt
-   {border-radius: 12px;
-  font-size: 35px;
-  background-color: rgb(168, 72, 128);
-  color:white;
-  }
-  p { 
-      color:#f7f3ef;
-      size: 15px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
-  h4{
-      color:red;
-      margin-left: 50%;
-  }
-</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="./form1.js"></script>
 </head>
 <body>
     <div><h3>Ajout membre:</h3>
-   <p>Utilisateur(*):<input type="text" name="user" value=""><br><br>
-  Mot de passe(*):<input type="text" name="pwd" value=""><br><br>
-  Mail(*):<input type="email"><br><br>
-  Nom(*):<input type="text" name="nom" value="">
-  Prenom(*):<input type="text" name="prenom" value=""><br><br>
+   <p>Utilisateur(*):<input type="text" id="user" value=""><br><br>
+  Mot de passe(*):<input type="text" id="pwd" value=""><br><br>
+  Mail(*):<input type="email" id="mail"><br><br>
+  Nom(*):<input type="text" id="nom" value="">
+  Prenom(*):<input type="text" id="prenom" value=""><br><br>
   Sexe(*): 
   <input type="radio" name="sexe" value checked>femme
   <input type="radio" name="sexe" value ="homme">homme<br><br>
@@ -80,9 +34,9 @@ font-size: 150%;
 Etat civil(*):<br><br>
 <input type="radio" name="" value="celebataire" checked>celebataire
 <input type="radio" name="" value="marie">Marie<br><br>
-Telephone:<input type="number" name="tele" value=""><br><br>
+Telephone:<input type="number" id="tele" ><br><br>
 
-<input style="margin-left: 70%" class="bt" type="submit" value="S'inscrire"> 
+<input style="margin-left: 70%" class="bt" type="submit"  onclick=" testuser();testpwd();testmail();testnom();testprenom();testtel()"> 
 
 </div>
 <h4>   Nb:il faut remplire tous les champs .</h4>
